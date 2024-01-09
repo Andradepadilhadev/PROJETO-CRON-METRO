@@ -1,0 +1,213 @@
+/* Configurações gerais */
+* {
+  font-family: "Orbitron", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Melhora a modelagem de caixa */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  gap: 2rem;
+  padding-top: 30vh; /* Ajusta o espaçamento superior */
+}
+
+.container h1 {
+  animation: bounce; /* Aplica a animação somente a este elemento */
+  animation-duration: 5s;
+  animation-iteration-count: infinite; /* Adiciona loop infinito */
+}
+
+.animated-counter {
+  animation: bounce; /* Adicione a animação desejada */
+  animation-duration: 5s; /* Defina a duração da animação */
+  animation-iteration-count: infinite; /* Adiciona loop infinito */
+}
+/* Se preferir, pode usar a classe da animate.css */
+.animate__animated {
+  animation-duration: 2s; /* Defina a duração da animação */
+}
+
+/* Adicione a classe de loop infinito */
+.animate__infinite {
+  animation-iteration-count: infinite; /* Adiciona loop infinito */
+}
+
+/* Estilos para o título */
+.container h1 {
+  color: black;
+  font-size: 80px;
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para a exibição do cronômetro */
+.timer {
+  display: flex;
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  gap: 5px; /* Espaço entre os elementos */
+}
+
+/* Estilos para cada unidade de tempo (minutos, segundos, milissegundos) */
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px; /* Espaçamento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  background-color: #61521096; /* Fundo branco */
+  color: #110e03b6;
+}
+
+/* Estilos para o separador entre os tempos */
+.separator {
+  font-size: 55px;
+  color: #63666d;
+}
+
+/* Estilos para os milissegundos */
+#milliseconds {
+  font-size: 18px;
+  color: #656970;
+}
+
+/* Estilos para os botões */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  margin-top: 2rem; /* Espaço superior */
+}
+
+/* Estilos gerais dos botões */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase; /* Deixa o texto em maiúsculo */
+}
+
+/* Efeito de hover nos botões */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos específicos para o botão 'Iniciar' */
+#startbtn {
+  background-color: #4caf4fbd; /* Verde */
+  color: black;
+}
+
+/* Estilos para o botão 'Pausar' */
+#pausebtn {
+  background-color: #ffd90059; /* Amarelo */
+  color: black;
+}
+
+/* Estilos para o botão 'continuar' */
+#resumebtn {
+  background-color: #4caf4fb4; /* verde */
+  color: black;
+}
+
+/* Estilos para o botão 'Resetar' */
+#resetbtn {
+  background-color: #ff000059; /* Vermelho */
+  color: black;
+}
+
+/* Estilos para os botões 'Pausar' e 'Continuar' */
+#resumebtn {
+  display: none;
+}
+video {
+  position: fixed; /* Mantém o vídeo fixo na tela */
+  top: 0; /* Alinha o topo do vídeo ao topo da tela */
+  left: 0; /* Alinha a esquerda do vídeo ao lado esquerdo da tela */
+  width: 100vw; /* Preenche toda a largura da tela */
+  height: 100vh; /* Preenche toda a altura da tela */
+  object-fit: cover; /* Garante que o vídeo preencha a área especificada sem distorção */
+  z-index: -1; /* Define o vídeo atrás dos outros elementos */
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 20vh; /* Reduz o espaçamento superior */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: column; /* Coloca os botões em coluna */
+    align-items: center; /* Centraliza os botões verticalmente */
+    margin-top: 1rem; /* Reduz o espaço superior */
+  }
+
+  .container h1 {
+    font-size: 40px; /* Reduz o tamanho da fonte do título */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer {
+    font-size: 40px; /* Reduz o tamanho do cronômetro */
+  }
+
+  .time {
+    padding: 5px 10px; /* Reduz o espaçamento interno */
+    font-size: 14px; /* Reduz o tamanho da fonte das unidades de tempo */
+  }
+
+  /* Adicione mais ajustes conforme necessário */
+}
+
+/* Estilos para telas ainda menores */
+@media screen and (max-width: 370px) {
+  .container {
+    padding-top: 10vh; /* Reduz ainda mais o espaçamento superior */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Reduz o preenchimento do botão */
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    margin-bottom: 1rem; /* Adiciona espaço entre os botões */
+  }
+
+  .buttons {
+    flex-direction: column; /* Coloca os botões em coluna */
+    align-items: center; /* Centraliza os botões verticalmente */
+    margin-top: 1rem; /* Reduz o espaço superior */
+  }
+
+  .btn {
+    padding: 6px 12px; /* Reduz ainda mais o preenchimento do botão */
+    font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    margin-bottom: 0.5rem; /* Reduz o espaço entre os botões */
+  }
+
+  .container h1 {
+    font-size: 30px; /* Reduz ainda mais o tamanho do título */
+  }
+
+  .timer {
+    font-size: 30px; /* Reduz ainda mais o tamanho do cronômetro */
+  }
+
+  .time {
+    padding: 3px 6px; /* Reduz ainda mais o espaçamento interno */
+    font-size: 12px; /* Reduz ainda mais o tamanho da fonte das unidades de tempo */
+  }
+
+  /* Adicione mais ajustes conforme necessário */
+}

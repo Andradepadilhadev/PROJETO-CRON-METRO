@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script src="js/scripts.js" defer></script>
+    <title>Cronômetro JS</title>
+  </head>
+
+  <body>
+    <video autoplay muted loop>
+      <source src="./css/img/relogio.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <h1>Cronômetro</h1>
+      <div class="timer">
+        <div class="time animated-counter" id="minutes">00</div>
+        <div class="separator"></div>
+        <div class="time animated-counter" id="seconds">:00</div>
+        <div class="separator"></div>
+        <div class="time animated-counter" id="milliseconds">:000</div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" id="startbtn">Iniciar</button>
+        <button class="btn" id="pausebtn">Pausar</button>
+        <button class="btn" id="resumebtn">Continuar</button>
+        <button class="btn" id="resetbtn">Resetar</button>
+      </div>
+    </div>
+  </body>
+</html>
