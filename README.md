@@ -22,6 +22,9 @@ O tempo é exibido dinamicamente na interface do usuário, com seções separada
 Funções auxiliares são utilizadas para formatar o tempo exibido, garantindo que os valores estejam sempre no formato desejado.
 
 Essa funcionalidade proporciona uma experiência simples e interativa de cronometragem, sendo uma oportunidade de aplicar e praticar conceitos fundamentais de JavaScript. 👇
+<br>
+<br>
+***Apresentação do Projeto*** => [Clique aqui](https://andrade-cronometro-devclub.netlify.app) e confira a proposta do projeto.
                                      
 </h3>
 
